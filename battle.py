@@ -92,7 +92,11 @@ class Battle():
     edit_menu = self.ui.generate_menu('edit') # ...move to Partcipants.py?
     deploy_menu.opts.edit = (edit_menu._run_menu, [])
         # self.edit_participant(choice[1])
-    deploy_menu.opts.remove = (lambda x: x.participants.pop(x.ui.get_input('str', msg="Name participant to remove by key.")), [self])
+    deploy_menu.opts.remove = (
+      lambda x: x.participants.pop(x.ui.get_input(
+        'str', msg="Name participant to remove by key."
+      )), [self]
+    )
     deploy_menu.opts.heal_all = (lambda: None, [])
     deploy_menu.opts.reinitialize = (self.__init__, [self.ui, self.DATABASE])
     deploy_menu.opts.remove_koed = (
