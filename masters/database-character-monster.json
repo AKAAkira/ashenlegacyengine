@@ -1,0 +1,30 @@
+{
+    "rippersquirrel": {
+        "fullname": "Ripper Squirrel",
+        "shorthand": "RS",
+        "stats": {
+            "maxhp": 100,
+            "maxep": 0,
+            "melee": 7,
+            "ranged": 0,
+            "defence": 7,
+            "speed": 10,
+            "arts": 0,
+            "casting": 0,
+            "resistance": 5
+        },
+        "affinities": {
+        },
+        "main_weapon": "claws",
+        "equipment": {
+            "claws": {
+                "fullname": "Ripper Squirrel Claws",
+                "attack_type": ["melee", "physical"],
+                "weaponstat":[2, "d", 10],
+                "weaponeffect": ""
+            }
+        },
+        "abilities": {
+        }
+    }
+}

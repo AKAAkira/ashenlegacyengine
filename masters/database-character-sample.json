@@ -1,0 +1,91 @@
+{
+    "kasia": {
+        "fullname": "Kasia Schwarzer",
+        "stats": {
+            "arts": 30,
+            "blackmarket": 0,
+            "casting": 26,
+            "cooking": 5,
+            "deception": 12,
+            "defence": 33,
+            "empathy": 16,
+            "engineering": 3,
+            "fairarts": 14,
+            "firstaid": 5,
+            "fishing": 0,
+            "geography": 14,
+            "history": 14,
+            "literature": 10,
+            "lore": 27,
+            "magicdevice": 22,
+            "math": 16,
+            "maxcp": 200,
+            "maxep": 400,
+            "maxhp": 450,
+            "melee": 39,
+            "orbments": 12,
+            "perception": 150,
+            "persuasion": 22,
+            "piloting": 9,
+            "politics&law": 15,
+            "ranged": 14,
+            "resistance": 24,
+            "sciences": 14,
+            "software": 450,
+            "speed": 33,
+            "stealth": 10,
+            "witch": 40
+        },
+        "weapons": {
+            "mediocretachi": {
+                "fullname": "Mediocre Tachi",
+                "weaponstat":[2, "d", 10],
+                "weaponeffect": ""
+            }
+        },
+        "main_weapon": "mediocretachi",
+        "equipment": {
+        }
+    },
+    "kasia-20230816": {
+       "fullname": "Kasia Schwarzer",
+        "stats": {
+            "_comments": [
+              "// speed got debuffed to 15 after club selection though",
+              "// W1:S - history",
+              "// W2:R - blackmarket",
+              "// W2:S/W3 - resistance",
+              "// W3:S/W4 - firstaid",
+              "// W4:R - engineering",
+              "// FE1:D1M - stealth, orbments, piloting",
+              "// ??? - ranged, arts, casting, cooking"
+            ],
+            "maxhp": 100,
+            "maxep": 100,
+            "melee": 20,
+            "ranged": 10,
+            "speed": 20,
+            "defence": 10,
+            "arts": 20,
+            "casting": 20,
+            "resistance": 20,
+            "lore": 10,
+            "witch": 12,
+            "stealth": 0,
+            "perception": 5,
+            "cooking": 0,
+            "firstaid": 5,
+            "fishing": 0,
+            "history": 12,
+            "geography": 8,
+            "orbments": 0,
+            "engineering": 0,
+            "magicdevices": 10,
+            "pursuasion": 5,
+            "deception": 0,
+            "empathy": 10,
+            "blackmarket": 0,
+            "piloting": 0
+        }
+    }
+}

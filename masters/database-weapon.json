@@ -1,0 +1,51 @@
+{
+  "bare_hands": {
+    "attack_type": ["melee"],
+    "attack_multiplier": 0.5,
+    "attack_power": [1, "d", 10]
+  },
+  "beginner's_tachi": {
+    "attack_type": ["melee"],
+    "attack_power": [2, "d", 10]
+  },
+  "mediocre_tachi": {
+    "attack_type": ["melee"],
+    "attack_power": [3, "d", 10]
+  },
+  "fair_tachi": {
+    "attack_type": ["melee"],
+    "attack_power": [5, "d", 10]
+  },
+  "enchanted_wooden_tachi": {
+    "attack_type": ["melee"],
+    "attack_power": [2, "d", 10]
+  },
+  "beginner's_spear": {
+    "attack_type": ["melee"],
+    "attack_power": [3, "d", 6]
+  },
+  "mediocre_spear": {
+    "attack_type": ["melee"],
+    "attack_power": [5, "d", 6]
+  },
+  "fair_spear": {
+    "attack_type": ["melee"],
+    "attack_power": [8, "d", 6]
+  },
+  "mediocre_greatsword": {
+    "attack_type": ["melee"],
+    "attack_power": [3, "d", 12]
+  },
+  "personalized_orbal_bow": {
+    "attack_type": ["ranged"],
+    "attack_power": [4, "d", 8]
+  },
+  "ophelia's_splendor": {
+    "attack_type": ["ranged"],
+    "attack_power": [25, "d", 8],
+    "effects": [
+      "-10 to Critical Threshold",
+      "+30 to Magical Damage"
+    ]
+  }
+}
