@@ -20,7 +20,7 @@
             "claws": {
                 "fullname": "Ripper Squirrel Claws",
                 "attack_type": ["melee", "physical"],
-                "weaponstat":[2, "d", 10],
+                "attack_power":[2, "d", 10],
                 "weaponeffect": ""
             }
         },

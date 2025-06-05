@@ -1,4 +1,4 @@
-import sys
+import re, sys
 
 class UI():
   
@@ -144,18 +144,24 @@ class UI():
     while len(msg.replace('\n', '')) > self.width:
       n += 1
       cutoff = (msg[:self.width] + '\n').find('\n')
-      space = msg[:cutoff].rfind(' ')
-      if space < 0:
+      space = msg[:self.width].rfind(' ')
+      if space < 0 or cutoff < space:
         space = cutoff
       print(msg[:space])
       if self.f_obj:
         self.f_obj.write(msg[:space] + '\n')
-      msg = msg[space:].strip()
+      msg = msg[space + 1:]
     n += msg.count('\n'); print(msg)
     if self.f_obj:
       self.f_obj.write(msg + '\n')
     
     return n
+  
+  def replace_brackets(self, msg):
+    """Replace brackets with paranthesis."""
+    re_brackets = re.compile(r"\[\]")
+    msg = re_brackets.sub(lambda x: '(' if x == '[' else ')', msg)
+    return msg
   
   # def present_menu(self, options):
     # """Menu screen implementation attempt where options is a dict; likely
@@ -163,19 +169,21 @@ class UI():
     # choice = self.get_input('selection', options)
     # options[choice][0](*options[choice][1])
   
-  def generate_menu(self, name):
-    return Menu(name, self)
+  def generate_menu(self, name, *args, **kwargs):
+    return Menu(name, self, *args, **kwargs)
 
 class Options():
   pass
 
 class Menu():
     
-  def __init__(self, name, ui_obj):
+  def __init__(self, name, ui_obj, exit_word='exit', is_return=False):
     self.name = name
     self.ui_obj = ui_obj
     self.disabled = set(); self.disabled.add('')
     self.opts = Options()
+    self.exit_word = exit_word
+    self.is_return = is_return
   
   def disable(self, *args):
     if len(args) == 1:
@@ -192,18 +200,20 @@ class Menu():
       while choice in self.disabled:
         n2 = self.ui_obj.log(f"{choice} is currently disabled!") if choice else 0
         choice = self.ui_obj.get_input(
-          'selection', options | {"exit": tuple()}
+          'selection', options | {self.exit_word: tuple()}
         )
         # print(self.disabled); input()
         self.ui_obj.delete_last_line(n2)
       self.ui_obj.delete_last_line(n)
-      if choice.lower() != 'exit':
+      if choice.lower() != self.exit_word.lower():
         # items in the tuple/list "action" should be ordered func, then args, then maybe help message
         action = options.get(choice)
         func, args = action[0], action[1]
         if len(action) > 2:
           assert len(action) < 4
           help = action[2]
+        if self.is_return:
+          return func(*args)
         func(*args)
         # loop if not one-off menu
         choice = ""

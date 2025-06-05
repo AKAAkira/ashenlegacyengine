@@ -1,8 +1,8 @@
 {
   "bare_hands": {
     "attack_type": ["melee"],
-    "attack_multiplier": 0.5,
-    "attack_power": [1, "d", 10]
+    "attack_power": [1],
+    "weapon_type": "bare_hands"
   },
   "beginner's_tachi": {
     "attack_type": ["melee"],

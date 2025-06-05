@@ -18,7 +18,10 @@ def rolldie(a=1, d=100, bank=None):
   for n in range(a - overflow):
     bank[d]['rolled'].append(random.randint(1, d))
   bank[d]['index'] += a
+  
   return bank[d]['rolled'][bank[d]['index'] - a:bank[d]['index']]
+# note to self: could this get reworked to replace return with yield?
+# Would having to append newly generated rolls to the list get in the way of that?
 
 def load_state(savepath):
   state = dict()

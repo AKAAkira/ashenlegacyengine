@@ -36,15 +36,15 @@
             "stealth": 10,
             "witch": 40
         },
-        "weapons": {
-            "mediocretachi": {
-                "fullname": "Mediocre Tachi",
-                "weaponstat":[2, "d", 10],
-                "weaponeffect": ""
-            }
-        },
         "main_weapon": "mediocretachi",
         "equipment": {
+            "mediocretachi": {
+                "fullname": "Mediocre Tachi",
+                "attack_power":[2, "d", 10],
+                "attack_type": ["melee", "physical"],
+                "weapon_type": ["tachi"],
+                "weaponeffect": ""
+            }
         }
     },
     "kasia-20230816": {
@@ -86,6 +86,17 @@
             "empathy": 10,
             "blackmarket": 0,
             "piloting": 0
+        },
+        "weapon_proficiencies": ["tachi"],
+        "main_weapon": "mediocretachi",
+        "equipment": {
+            "mediocretachi": {
+                "fullname": "Mediocre Tachi",
+                "attack_power":[2, "d", 10],
+                "attack_type": ["melee", "physical"],
+                "weapon_type": ["tachi"],
+                "weaponeffect": ""
+            }
         }
     }
 }
